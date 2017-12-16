@@ -1,4 +1,4 @@
 # Ansible Playbooks
 
-Repository for my Ansible Playboos
+Repository for my Ansible Playbooks
 
