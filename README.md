@@ -1,8 +1,6 @@
 # Ansible Playbooks
 
-Repository for my Ansible Playbooks
-
-## Hello-World Ansible playbooks for NetApp storage systems
+Hello-World Ansible playbooks for NetApp storage systems
 
 ### Prerequisites
 
