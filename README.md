@@ -9,11 +9,20 @@ Repository for my Ansible Playbooks
 
 ## Installation
 
-Install the below netapp-lib module
+Depends on the storage system you are working with, a different module is needed.
+
+#### ONTAP
 
 ```shell
 $ pip install netapp-lib --user
 ```
+
+#### SolidFire
+
+```shell
+$ pip install solidfire-sdk-python
+```
+
 
 And clone this repository:
 ```shell
@@ -22,10 +31,16 @@ $ git clone https://github.com/pablogarciaarevalo/ansible_playbooks.git
 
 ## Running playbooks
 
-### Hello world playbook for NetApp ONTAP
-
 Modify the values according to your storage systems and run the playbook
+
+#### Hello world playbook for ONTAP
 
 ```shell
 $ ansible-playbook example_netapp_ontap.yml
+```
+
+#### Hello world playbook for SolidFire
+
+```shell
+$ ansible-playbook example_netapp_solidfire.yml
 ```

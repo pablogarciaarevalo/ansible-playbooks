@@ -1,0 +1,25 @@
+---
+# This playbook deploys a NetApp volume on SolidFire
+
+- name: example netapp solidfire
+  hosts: localhost
+  gather_facts: no
+  connection: local
+
+  vars:
+    netapp_hostname: 192.168.0.10
+    netapp_username: admin
+    netapp_password: password
+  tasks:  
+    - name: Create Volume
+      sf_volume_manager:
+        hostname: "{{ netapp_hostname }}"
+        username: "{{ netapp_username }}"
+        password: "{{ netapp_password }}"
+        state: present
+        name: AnsibleVol
+        qos: {minIOPS: 1000, maxIOPS: 20000, burstIOPS: 50000}
+        account_id: 3
+        enable512e: False
+        size: 1
+        size_unit: gb
