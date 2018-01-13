@@ -2,7 +2,7 @@
 
 Repository for my Ansible Playbooks
 
-## Requirements
+## Prerequisites
 
 * ONTAP 8.3 or later
 * Ansible 2.3 or later
@@ -20,7 +20,9 @@ And clone this repository:
 $ git clone https://github.com/pablogarciaarevalo/ansible_playbooks.git
 ```
 
-## Run a Hello world playbook for NetApp ONTAP
+## Running playbooks
+
+### Hello world playbook for NetApp ONTAP
 
 Modify the values according to your storage systems and run the playbook
 
