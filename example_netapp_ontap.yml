@@ -1,7 +1,7 @@
 ---
 # This playbook deploys a NetApp SVM on ONTAP
 
-- name: example create netapp svm
+- name: example netapp ontap
   hosts: localhost
   gather_facts: no
   connection: local
