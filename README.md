@@ -20,7 +20,7 @@ And clone this repository:
 $ git clone https://github.com/pablogarciaarevalo/ansible_playbooks.git
 ```
 
-## Run a Hello world for NetApp ONTAP
+## Run a Hello world playbook for NetApp ONTAP
 
 Modify the values according to your storage systems and run the playbook
 
