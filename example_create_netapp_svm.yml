@@ -1,0 +1,35 @@
+---
+# This playbook deploys a NetApp SVM on ONTAP
+
+- name: example netapp ontap
+  hosts: localhost
+  gather_facts: no
+  connection: local
+
+  vars:
+    netapp_hostname: 192.168.0.10
+    netapp_username: admin
+    netapp_password: password
+  tasks:
+    - name: SVM Manager
+      na_cdot_svm:
+        state: present
+        name: ansibleVServer
+        root_volume: vol1
+        root_volume_aggregate: aggrSATA_n1
+        root_volume_security_style: ntfs
+        hostname: "{{ netapp_hostname }}"
+        username: "{{ netapp_username }}"
+        password: "{{ netapp_password }}"
+
+    - name: Volume Manager
+      na_cdot_volume:
+        state: present
+        name: ansibleVolume
+        aggregate_name: aggrSATA_n1
+        size: 20
+        size_unit: mb
+        vserver: ansibleVServer
+        hostname: "{{ netapp_hostname }}"
+        username: "{{ netapp_username }}"
+        password: "{{ netapp_password }}"
