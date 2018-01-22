@@ -24,6 +24,7 @@ $ pip install netapp-lib --user
 ```
 
 #### Running playbook
+Example: Create a new Storage Virtual Machine
 
 ```shell
 $ ansible-playbook example_netapp_ontap.yml
@@ -40,6 +41,7 @@ $ pip install solidfire-sdk-python
 ```
 
 #### Running playbook
+Example: Create a new volume
 
 ```shell
 $ ansible-playbook example_netapp_solidfire.yml
